@@ -11,6 +11,13 @@ DSH(DeepSeek Harness)Web 客户端插件:在对话框**模型选择按钮左侧*
 
 判定规则(与官方定价一致):高峰时段为北京时间 **09:00–12:00、14:00–18:00**,其余为空闲(谷)时段。按 `Asia/Shanghai` 时区计算,不依赖浏览器本地时区;每 30 秒自动刷新,跨时段自动切换。
 
+**显示条件**:仅当当前会话使用 **DeepSeek 官方模型**且 **API 源为官方**(`api.deepseek.com`)时才显示。判断依据:
+
+- 当前模型的 provider 路由为官方适配器 `deepseek-official` 且模型 id 以 `deepseek-` 开头(经 `session.models` 查询);
+- 未将 `llm-deepseek` 配置的 `baseURL` 显式改为非官方地址(经 `settings.describe` 查询)。
+
+使用第三方中转(其他 provider 或自定义 baseURL)时不显示。
+
 ## 安装
 
 在 DSH profile 目录(例如 `~/.dsh/profiles/web/`)下:
