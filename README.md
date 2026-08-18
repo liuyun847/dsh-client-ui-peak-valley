@@ -30,7 +30,7 @@ DSH(DeepSeek Harness)Web 客户端插件:在对话框**模型选择按钮左侧*
    // package.json
    {
      "dependencies": {
-       "dsh-client-ui-peak-valley": "github:<你的用户名>/dsh-client-ui-peak-valley"
+       "dsh-client-ui-peak-valley": "github:liuyun847/dsh-client-ui-peak-valley"
      }
    }
    ```
@@ -47,7 +47,7 @@ DSH(DeepSeek Harness)Web 客户端插件:在对话框**模型选择按钮左侧*
 
 3. 重启 `dsh web`,刷新页面后生效。
 
-> 也可以先 `npm publish` 发布到 npm registry,再把依赖改为 `"dsh-client-ui-peak-valley": "^0.1.0"`。
+> 也可以先 `npm publish` 发布到 npm registry,再把依赖改为 `"dsh-client-ui-peak-valley": "^0.1.1"`。
 
 ## 工作原理
 
