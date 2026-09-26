@@ -1,0 +1,9 @@
+# dsh-client-ui-peak-valley 的 profile 层 patch。
+# 2026-09-25 从 profile 的 cordis.patch.yml 迁入：本包自当日成为组合包(bundle)，
+# 宿主按 profile 的 dsh.profile.bundles 加载本包时应用本文件。
+# 启停：插件页「已安装」里本卡的总开关(写 bundles)，或卡片详情里的行级开关
+# (向 profile 的 cordis.patch.yml 写 disabled 覆盖)。
+# 行 id `peak-valley` 是上述开关与 settings 命名空间的寻址键，勿改。
+- insert:
+    - id: peak-valley
+      name: 'dsh-client-ui-peak-valley'
