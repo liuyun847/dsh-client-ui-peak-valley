@@ -63,7 +63,7 @@ pnpm install
 #   `.gitignore` 不在 files 白名单、不进副本,副本里那份是旧残留,不必同步。⚠ `write`/`edit` 这类"写临时文件再改名"的写入会**打断硬链接**,
 #   被它改过的文件此后就是独立拷贝,同样必须同步。
 # 修改 lib/client.js 后:宿主 client-hmr 会按 500ms 轮询客户端 bundle,
-# 内容哈希变化即通过 SSE 让浏览器自动重载该插件(无需重启 dsh web)。
+# 内容哈希变化即通过 SSE 让浏览器自动重载该插件(无需重启 DSH——桌面端:关掉再打开 DeepSeek Harness 窗口)。
 # 若改了 package.json 的 dsh 声明,则需重新安装/重启。
 # 改包内 cordis.patch.yml(属拷贝文件,按上面的拷贝同步方式同步到副本)属**包层 patch**:
 #   不需要重启,但它不会自己触发重组合 —— dsh-hmr 只监视 profile 的 cordis.patch.yml、
